@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "BciViewController.viewWillAppear(_:):BciViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(self.navigationController?.viewControllers.count)!">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "BciViewController.viewWillDisappear(_:):BciViewController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "(self.navigationController?.viewControllers.count)">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
