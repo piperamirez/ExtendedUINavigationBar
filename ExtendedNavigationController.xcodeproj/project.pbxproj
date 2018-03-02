@@ -109,9 +109,9 @@
 		4AE5526E2049857300F603FE /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
-				4AEAF5A520489FAD0070F714 /* FirstViewController.swift */,
 				4AE55270204985BB00F603FE /* FirstViewHeader.xib */,
 				4A0E45D220498C0800D80095 /* FirstViewHeader.swift */,
+				4AEAF5A520489FAD0070F714 /* FirstViewController.swift */,
 			);
 			path = FirstView;
 			sourceTree = "<group>";

@@ -11,14 +11,14 @@ import UIKit
 class ExtendedViewController: UIViewController {
     
     var initialHeaderHeight: CGFloat = 0.0
-    var headerHeight: CGFloat = 0.0
+    private var headerHeight: CGFloat = 10.0
     
     var headerView: ExtendedHeaderView?
     var contentView: UIView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView = ExtendedHeaderView(withHeight: 10.0)
+        headerView = ExtendedHeaderView(withHeight: headerHeight)
         self.view.addSubview(headerView!)
         self.view.backgroundColor = #colorLiteral(red: 0.9639434218, green: 0.9686880708, blue: 0.9771985412, alpha: 1)
         headerView?.backgroundColor = .white
@@ -54,6 +54,11 @@ class ExtendedViewController: UIViewController {
                 completion: nil
             )
         }
+    }
+    
+    func setHeaderView(_ view: UIView) {
+        headerHeight = view.bounds.height
+        headerView?.setView(view)
     }
 
 }

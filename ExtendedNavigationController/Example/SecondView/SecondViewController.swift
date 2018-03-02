@@ -13,7 +13,6 @@ class SecondViewController: ExtendedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Second"
-        headerHeight = 200
     }
     
 }

@@ -12,11 +12,16 @@ class FirstViewController: ExtendedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "First"
-        headerHeight = 100
+        title = "First"
+        
+        // We define a subclass of ExtendedHeaderView and initialize it with
+        // a desired height and set it to this ExtendedViewController's header
+        // view.
         let header = FirstViewHeader(withHeight: 100)
-        header.titleLabel.text = "Hey, I'm the view controller!"
-        self.headerView?.setView(header)
+        setHeaderView(header)
+        
+        // Then we can access properties of our custom ExtendedHeaderView
+        header.titleLabel.text = "Hey! I have access to this view 🎉"
     }
 
 }
