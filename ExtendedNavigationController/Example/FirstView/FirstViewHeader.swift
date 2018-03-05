@@ -8,18 +8,18 @@
 
 import UIKit
 
-class FirstViewHeader: ExtendedHeaderView {
+class FirstViewHeader: UIView {
 
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    init() {
+        super.init(frame: CGRect.zero)
         loadFromNib()
     }
     
-    override init(withHeight height: CGFloat) {
-        super.init(withHeight: height)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         loadFromNib()
     }
     

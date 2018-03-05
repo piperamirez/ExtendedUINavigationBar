@@ -19,7 +19,6 @@
 		4AEAF59E20484DD20070F714 /* ExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAF59D20484DD20070F714 /* ExtendedViewController.swift */; };
 		4AEAF5A220489D780070F714 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAF5A120489D770070F714 /* SecondViewController.swift */; };
 		4AEAF5A620489FAD0070F714 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAF5A520489FAD0070F714 /* FirstViewController.swift */; };
-		4AEAF5A82049664F0070F714 /* ExtendedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AEAF5A72049664F0070F714 /* ExtendedHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +57,6 @@
 		4AEAF59D20484DD20070F714 /* ExtendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedViewController.swift; sourceTree = "<group>"; };
 		4AEAF5A120489D770070F714 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		4AEAF5A520489FAD0070F714 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		4AEAF5A72049664F0070F714 /* ExtendedHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtendedHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +89,6 @@
 			children = (
 				4AEAF59B2048452E0070F714 /* ExtendedNavigationViewController.swift */,
 				4AEAF59D20484DD20070F714 /* ExtendedViewController.swift */,
-				4AEAF5A72049664F0070F714 /* ExtendedHeaderView.swift */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -310,7 +307,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AEAF5A82049664F0070F714 /* ExtendedHeaderView.swift in Sources */,
 				4AEAF59C2048452E0070F714 /* ExtendedNavigationViewController.swift in Sources */,
 				4AEAF56E204843FA0070F714 /* AppDelegate.swift in Sources */,
 				4A0E45D320498C0800D80095 /* FirstViewHeader.swift in Sources */,

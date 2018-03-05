@@ -10,15 +10,17 @@ import UIKit
 
 class ExtendedViewController: UIViewController {
     
-    var initialHeaderHeight: CGFloat = 0.0
-    private var headerHeight: CGFloat = 10.0
+    var initialHeaderHeight: CGFloat = 10.0
+    var headerHeight: CGFloat = 10.0
     
-    var headerView: ExtendedHeaderView?
+    var headerView: UIView?
     var contentView: UIView?
+    
+    let padding: CGFloat = 10.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        headerView = ExtendedHeaderView(withHeight: headerHeight)
+        headerView = UIView(frame: CGRect.zero)
         self.view.addSubview(headerView!)
         self.view.backgroundColor = #colorLiteral(red: 0.9639434218, green: 0.9686880708, blue: 0.9771985412, alpha: 1)
         headerView?.backgroundColor = .white
@@ -27,13 +29,13 @@ class ExtendedViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        headerView?.height = initialHeaderHeight
+        headerView?.frame = getHeaderFrame(withHeight: initialHeaderHeight)
         UIView.animate(
             withDuration: 0.35,
             delay: 0.0,
             options: [.curveEaseOut],
             animations: {
-                self.headerView?.height = self.headerHeight
+                self.headerView?.frame = self.getHeaderFrame(withHeight: self.headerHeight)
             },
             completion: nil
         )
@@ -49,7 +51,7 @@ class ExtendedViewController: UIViewController {
                 delay: 0.0,
                 options: [.curveEaseOut],
                 animations: {
-                    self.headerView?.height = previousViewController.headerHeight
+                    self.headerView?.frame = self.getHeaderFrame(withHeight: previousViewController.headerHeight)
                 },
                 completion: nil
             )
@@ -57,8 +59,33 @@ class ExtendedViewController: UIViewController {
     }
     
     func setHeaderView(_ view: UIView) {
-        headerHeight = view.bounds.height
-        headerView?.setView(view)
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.clipsToBounds = true
+        headerView?.addSubview(view)
+    }
+    
+    func setContentView(_ view: UIView) {
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        view.clipsToBounds = true
+        contentView?.addSubview(view)
+    }
+    
+    func getHeaderFrame(withHeight height: CGFloat) -> CGRect {
+        return CGRect(
+            x: view.bounds.minX,
+            y: view.bounds.minY,
+            width: view.bounds.width,
+            height: height
+        )
+    }
+    
+    func getContentFrame(withHeaderHeight headerHeight: CGFloat)  -> CGRect{
+        return CGRect(
+            x: view.bounds.minX,
+            y: view.bounds.minY + headerHeight + padding,
+            width: view.bounds.width,
+            height: view.bounds.height - headerHeight - padding
+        )
     }
 
 }
