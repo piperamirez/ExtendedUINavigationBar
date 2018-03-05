@@ -12,7 +12,7 @@ class FirstViewController: ExtendedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "First"
+        title = "Custom"
         view.backgroundColor = #colorLiteral(red: 0.9639434218, green: 0.9686880708, blue: 0.9771985412, alpha: 1)
         
         // We tell our ExtendedViewController how tall is it's header. He will
