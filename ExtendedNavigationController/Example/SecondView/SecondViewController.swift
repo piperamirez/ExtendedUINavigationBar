@@ -12,7 +12,18 @@ class SecondViewController: ExtendedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Second"
+        title = "Second"
+        view.backgroundColor = #colorLiteral(red: 0.9639434218, green: 0.9686880708, blue: 0.9771985412, alpha: 1)
+        
+        headerHeight = 100
+        
+        let header = UIView()
+        setHeaderView(header)
+        header.backgroundColor = .white
+        
+        let content = UIView()
+        setContentView(content)
+        content.backgroundColor = .white
     }
     
 }

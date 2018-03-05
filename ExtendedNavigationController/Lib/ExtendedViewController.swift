@@ -20,22 +20,26 @@ class ExtendedViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         headerView = UIView(frame: CGRect.zero)
-        self.view.addSubview(headerView!)
-        self.view.backgroundColor = #colorLiteral(red: 0.9639434218, green: 0.9686880708, blue: 0.9771985412, alpha: 1)
-        headerView?.backgroundColor = .white
         headerView?.dropShadow(color: .black, opacity: 0.05, offSet: CGSize(width: 0, height: 3), radius: 5)
+        view.addSubview(headerView!)
+        
+        contentView = UIView(frame: CGRect.zero)
+        view.addSubview(contentView!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         headerView?.frame = getHeaderFrame(withHeight: initialHeaderHeight)
+        contentView?.frame = getContentFrame(withHeaderHeight: initialHeaderHeight)
         UIView.animate(
             withDuration: 0.35,
             delay: 0.0,
             options: [.curveEaseOut],
             animations: {
                 self.headerView?.frame = self.getHeaderFrame(withHeight: self.headerHeight)
+                self.contentView?.frame = self.getContentFrame(withHeaderHeight: self.headerHeight)
             },
             completion: nil
         )
@@ -52,6 +56,7 @@ class ExtendedViewController: UIViewController {
                 options: [.curveEaseOut],
                 animations: {
                     self.headerView?.frame = self.getHeaderFrame(withHeight: previousViewController.headerHeight)
+                    self.contentView?.frame = self.getContentFrame(withHeaderHeight: previousViewController.headerHeight)
                 },
                 completion: nil
             )
@@ -79,7 +84,7 @@ class ExtendedViewController: UIViewController {
         )
     }
     
-    func getContentFrame(withHeaderHeight headerHeight: CGFloat)  -> CGRect{
+    func getContentFrame(withHeaderHeight headerHeight: CGFloat) -> CGRect {
         return CGRect(
             x: view.bounds.minX,
             y: view.bounds.minY + headerHeight + padding,
