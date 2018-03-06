@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ExtendedUINavigationBar'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of ExtendedUINavigationBar.'
+  s.version          = '0.0.1'
+  s.summary          = 'If you ever need to extend the height of UIKit NavigationBar.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+This helps extending the work area of UIKit NavigationBar by adding a header view.
                        DESC
 
   s.homepage         = 'https://github.com/piperamirez/ExtendedUINavigationBar'

@@ -64,13 +64,13 @@ open class ExtendedViewController: UIViewController {
         }
     }
     
-    open func setHeaderView(_ view: UIView) {
+    open func setHeader(_ view: UIView) {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.clipsToBounds = true
         headerView?.addSubview(view)
     }
     
-    open func setContentView(_ view: UIView) {
+    open func setContent(_ view: UIView) {
         view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.clipsToBounds = true
         contentView?.addSubview(view)

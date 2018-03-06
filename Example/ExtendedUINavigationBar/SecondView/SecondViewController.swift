@@ -13,8 +13,8 @@ class SecondViewController: MyExtendedViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Default"
-        setHeaderView(UIView())
-        setContentView(UIView())
+        setHeader(UIView())
+        setContent(UIView())
     }
     
 }

@@ -23,7 +23,7 @@ class FirstViewController: MyExtendedViewController {
         // a desired height and set it to this ExtendedViewController's header
         // view. We leave a reference to it so we can access it later.
         let header = FirstViewHeader()
-        setHeaderView(header)
+        setHeader(header)
         
         // Then we can access properties of our custom ExtendedHeaderView
         header.titleLabel.text = "Hey! I have access to this view 🎉"
@@ -31,7 +31,7 @@ class FirstViewController: MyExtendedViewController {
         // Now we programmatically create a UIView and set it to this
         // ExtendedViewController's content view.
         let content = UIView()
-        setContentView(content)
+        setContent(content)
         
         // Then we can use the content view
         content.backgroundColor = .white
