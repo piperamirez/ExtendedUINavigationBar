@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import ExtendedUINavigationBar
 
-class FirstViewController: ExtendedViewController {
+class FirstViewController: MyExtendedViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

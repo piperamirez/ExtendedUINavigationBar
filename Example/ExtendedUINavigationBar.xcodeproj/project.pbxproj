@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		070146F6A8B14C28FB585A20 /* Pods_ExtendedUINavigationBar_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD3355BEBA2C70CD5DEF4ECE /* Pods_ExtendedUINavigationBar_Example.framework */; };
+		4A03E3B3204E0FC70026EAD2 /* MyExtendedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A03E3B2204E0FC70026EAD2 /* MyExtendedViewController.swift */; };
 		4A246B3B204E030D00B93CE0 /* FirstViewHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A246B38204E030B00B93CE0 /* FirstViewHeader.xib */; };
 		4A246B3C204E030D00B93CE0 /* FirstViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A246B39204E030C00B93CE0 /* FirstViewHeader.swift */; };
 		4A246B3D204E030D00B93CE0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A246B3A204E030D00B93CE0 /* FirstViewController.swift */; };
@@ -34,6 +35,7 @@
 		2C5A648302BE8AD9FF75F68F /* Pods-ExtendedUINavigationBar_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUINavigationBar_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUINavigationBar_Example/Pods-ExtendedUINavigationBar_Example.release.xcconfig"; sourceTree = "<group>"; };
 		3290AAC5E70A33FD7FBDC441 /* Pods-ExtendedUINavigationBar_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUINavigationBar_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUINavigationBar_Tests/Pods-ExtendedUINavigationBar_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3B5E8228BDD56694F7E54FBD /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		4A03E3B2204E0FC70026EAD2 /* MyExtendedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyExtendedViewController.swift; sourceTree = "<group>"; };
 		4A246B38204E030B00B93CE0 /* FirstViewHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewHeader.xib; sourceTree = "<group>"; };
 		4A246B39204E030C00B93CE0 /* FirstViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewHeader.swift; sourceTree = "<group>"; };
 		4A246B3A204E030D00B93CE0 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4A03E3AF204E0F350026EAD2 /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				4A03E3B2204E0FC70026EAD2 /* MyExtendedViewController.swift */,
+			);
+			path = Commons;
+			sourceTree = "<group>";
+		};
 		4A246B35204E02E000B93CE0 /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		607FACD21AFB9204008FA782 /* Example for ExtendedUINavigationBar */ = {
 			isa = PBXGroup;
 			children = (
+				4A03E3AF204E0F350026EAD2 /* Commons */,
 				4A246B35204E02E000B93CE0 /* FirstView */,
 				4A246B37204E02F000B93CE0 /* SecondView */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -407,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A246B3F204E031800B93CE0 /* SecondViewController.swift in Sources */,
+				4A03E3B3204E0FC70026EAD2 /* MyExtendedViewController.swift in Sources */,
 				4A246B3D204E030D00B93CE0 /* FirstViewController.swift in Sources */,
 				4A246B3C204E030D00B93CE0 /* FirstViewHeader.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,

@@ -10,19 +10,20 @@ import UIKit
 
 open class ExtendedViewController: UIViewController {
     
-    var initialHeaderHeight: CGFloat = 10.0
-    open var headerHeight: CGFloat = 10.0
-    
+    open var headerHeight: CGFloat = 0.0
+    open var headerMargin: CGFloat = 0.0
     open var headerView: UIView?
     open var contentView: UIView?
     
-    let padding: CGFloat = 10.0
+    // Approximately the duration of a show segue
+    open var animationDuration: TimeInterval = 0.35
+    
+    var initialHeaderHeight: CGFloat = 0.0
     
     override open func viewDidLoad() {
         super.viewDidLoad()
         
         headerView = UIView(frame: CGRect.zero)
-        headerView?.dropShadow(color: .black, opacity: 0.05, offSet: CGSize(width: 0, height: 3), radius: 5)
         view.addSubview(headerView!)
         
         contentView = UIView(frame: CGRect.zero)
@@ -34,7 +35,7 @@ open class ExtendedViewController: UIViewController {
         headerView?.frame = getHeaderFrame(withHeight: initialHeaderHeight)
         contentView?.frame = getContentFrame(withHeaderHeight: initialHeaderHeight)
         UIView.animate(
-            withDuration: 0.35,
+            withDuration: animationDuration,
             delay: 0.0,
             options: [.curveEaseOut],
             animations: {
@@ -51,7 +52,7 @@ open class ExtendedViewController: UIViewController {
             let previousViewController = previousViewController as! ExtendedViewController
             previousViewController.initialHeaderHeight = self.headerHeight
             UIView.animate(
-                withDuration: 0.35,
+                withDuration: animationDuration,
                 delay: 0.0,
                 options: [.curveEaseOut],
                 animations: {
@@ -87,20 +88,10 @@ open class ExtendedViewController: UIViewController {
     func getContentFrame(withHeaderHeight headerHeight: CGFloat) -> CGRect {
         return CGRect(
             x: view.bounds.minX,
-            y: view.bounds.minY + headerHeight + padding,
+            y: view.bounds.minY + headerHeight + headerMargin,
             width: view.bounds.width,
-            height: view.bounds.height - headerHeight - padding
+            height: view.bounds.height - headerHeight - headerMargin
         )
     }
 
-}
-
-extension UIView {
-    func dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1) {
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = color.cgColor
-        self.layer.shadowOffset = offSet
-        self.layer.shadowRadius = radius
-        self.layer.shadowOpacity = opacity
-    }
 }
