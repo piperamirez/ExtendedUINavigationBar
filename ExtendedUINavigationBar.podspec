@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'ExtendedUINavigationBar'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'If you ever need to extend the height of UIKit NavigationBar.'
 
 # This description is used to generate tags and improve search results.
