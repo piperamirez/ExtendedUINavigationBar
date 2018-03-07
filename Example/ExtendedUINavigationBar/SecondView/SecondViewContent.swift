@@ -1,5 +1,5 @@
 //
-//  FirstViewHeader.swift
+//  SecondViewContent.swift
 //  ExtendedNavigationController
 //
 //  Created by Felipe Ramírez on 3/2/18.
@@ -8,11 +8,9 @@
 
 import UIKit
 
-class FirstViewHeader: UIView {
+class SecondViewContent: UIView {
 
     @IBOutlet var contentView: UIView!
-    @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var expandButton: UIButton!
     
     init() {
         super.init(frame: CGRect.zero)
@@ -25,7 +23,7 @@ class FirstViewHeader: UIView {
     }
     
     func loadFromNib() {
-        Bundle.main.loadNibNamed("FirstViewHeader", owner: self, options: nil)
+        Bundle.main.loadNibNamed("SecondViewContent", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]

@@ -34,16 +34,7 @@ open class ExtendedViewController: UIViewController {
         super.viewWillAppear(animated)
         headerView?.frame = getHeaderFrame(withHeight: initialHeaderHeight)
         contentView?.frame = getContentFrame(withHeaderHeight: initialHeaderHeight)
-        UIView.animate(
-            withDuration: animationDuration,
-            delay: 0.0,
-            options: [.curveEaseOut],
-            animations: {
-                self.headerView?.frame = self.getHeaderFrame(withHeight: self.headerHeight)
-                self.contentView?.frame = self.getContentFrame(withHeaderHeight: self.headerHeight)
-            },
-            completion: nil
-        )
+        animateResize(withHeight: self.headerHeight)
     }
     
     override open func viewWillDisappear(_ animated: Bool) {
@@ -51,16 +42,7 @@ open class ExtendedViewController: UIViewController {
         if let previousViewController = self.navigationController?.viewControllers.last {
             if let previousViewController = previousViewController as? ExtendedViewController {
                 previousViewController.initialHeaderHeight = self.headerHeight
-                UIView.animate(
-                    withDuration: animationDuration,
-                    delay: 0.0,
-                    options: [.curveEaseOut],
-                    animations: {
-                        self.headerView?.frame = self.getHeaderFrame(withHeight: previousViewController.headerHeight)
-                        self.contentView?.frame = self.getContentFrame(withHeaderHeight: previousViewController.headerHeight)
-                    },
-                    completion: nil
-                )
+                animateResize(withHeight: previousViewController.headerHeight)
             }
         }
     }
@@ -92,6 +74,24 @@ open class ExtendedViewController: UIViewController {
             y: view.bounds.minY + headerHeight + headerMargin,
             width: view.bounds.width,
             height: view.bounds.height - headerHeight - headerMargin
+        )
+    }
+    
+    open func setHeaderHeight(_ headerHeight: CGFloat) {
+        self.headerHeight = headerHeight
+        animateResize(withHeight: headerHeight)
+    }
+    
+    private func animateResize(withHeight height: CGFloat) {
+        UIView.animate(
+            withDuration: animationDuration,
+            delay: 0.0,
+            options: [.curveEaseOut],
+            animations: {
+                self.headerView?.frame = self.getHeaderFrame(withHeight: height)
+                self.contentView?.frame = self.getContentFrame(withHeaderHeight: height)
+            },
+            completion: nil
         )
     }
 
