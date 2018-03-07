@@ -37,3 +37,5 @@ xcuserdata/
 
 Example/DerivedData
 Example/Pods
+
+Example/Podfile.lock

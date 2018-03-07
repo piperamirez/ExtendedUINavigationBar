@@ -49,18 +49,19 @@ open class ExtendedViewController: UIViewController {
     override open func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         if let previousViewController = self.navigationController?.viewControllers.last {
-            let previousViewController = previousViewController as! ExtendedViewController
-            previousViewController.initialHeaderHeight = self.headerHeight
-            UIView.animate(
-                withDuration: animationDuration,
-                delay: 0.0,
-                options: [.curveEaseOut],
-                animations: {
-                    self.headerView?.frame = self.getHeaderFrame(withHeight: previousViewController.headerHeight)
-                    self.contentView?.frame = self.getContentFrame(withHeaderHeight: previousViewController.headerHeight)
-                },
-                completion: nil
-            )
+            if let previousViewController = previousViewController as? ExtendedViewController {
+                previousViewController.initialHeaderHeight = self.headerHeight
+                UIView.animate(
+                    withDuration: animationDuration,
+                    delay: 0.0,
+                    options: [.curveEaseOut],
+                    animations: {
+                        self.headerView?.frame = self.getHeaderFrame(withHeight: previousViewController.headerHeight)
+                        self.contentView?.frame = self.getContentFrame(withHeaderHeight: previousViewController.headerHeight)
+                    },
+                    completion: nil
+                )
+            }
         }
     }
     
