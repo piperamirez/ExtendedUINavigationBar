@@ -35,6 +35,17 @@ class FirstViewController: MyExtendedViewController {
         
         // Then we can use the content view
         content.backgroundColor = .white
+        
+        // We modify the height in runtime
+        header.expandButton.addTarget(self, action: #selector(toggleHeaderHeight), for: .touchUpInside)
+    }
+    
+    @objc func toggleHeaderHeight() {
+        if headerHeight == 200 {
+            setHeaderHeight(100)
+        } else {
+            setHeaderHeight(200)
+        }
     }
 
 }

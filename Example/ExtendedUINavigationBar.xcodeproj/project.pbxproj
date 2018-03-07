@@ -13,6 +13,8 @@
 		4A246B3C204E030D00B93CE0 /* FirstViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A246B39204E030C00B93CE0 /* FirstViewHeader.swift */; };
 		4A246B3D204E030D00B93CE0 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A246B3A204E030D00B93CE0 /* FirstViewController.swift */; };
 		4A246B3F204E031800B93CE0 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A246B3E204E031800B93CE0 /* SecondViewController.swift */; };
+		4AA7F73C20502E740002802F /* SecondViewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA7F73B20502E740002802F /* SecondViewContent.swift */; };
+		4AA7F73D20502F2A0002802F /* SecondViewContent.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4AA7F73A20502E710002802F /* SecondViewContent.xib */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
@@ -40,6 +42,8 @@
 		4A246B39204E030C00B93CE0 /* FirstViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewHeader.swift; sourceTree = "<group>"; };
 		4A246B3A204E030D00B93CE0 /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		4A246B3E204E031800B93CE0 /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		4AA7F73A20502E710002802F /* SecondViewContent.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondViewContent.xib; sourceTree = "<group>"; };
+		4AA7F73B20502E740002802F /* SecondViewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewContent.swift; sourceTree = "<group>"; };
 		56CB624F6F256DDD1542EA37 /* Pods-ExtendedUINavigationBar_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExtendedUINavigationBar_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ExtendedUINavigationBar_Example/Pods-ExtendedUINavigationBar_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* ExtendedUINavigationBar_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExtendedUINavigationBar_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				4A246B3E204E031800B93CE0 /* SecondViewController.swift */,
+				4AA7F73B20502E740002802F /* SecondViewContent.swift */,
+				4AA7F73A20502E710002802F /* SecondViewContent.xib */,
 			);
 			path = SecondView;
 			sourceTree = "<group>";
@@ -286,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A246B3B204E030D00B93CE0 /* FirstViewHeader.xib in Resources */,
+				4AA7F73D20502F2A0002802F /* SecondViewContent.xib in Resources */,
 				607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
@@ -417,6 +424,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA7F73C20502E740002802F /* SecondViewContent.swift in Sources */,
 				4A246B3F204E031800B93CE0 /* SecondViewController.swift in Sources */,
 				4A03E3B3204E0FC70026EAD2 /* MyExtendedViewController.swift in Sources */,
 				4A246B3D204E030D00B93CE0 /* FirstViewController.swift in Sources */,

@@ -14,7 +14,7 @@ class SecondViewController: MyExtendedViewController {
         super.viewDidLoad()
         title = "Default"
         setHeader(UIView())
-        setContent(UIView())
+        setContent(SecondViewContent())
     }
     
 }
